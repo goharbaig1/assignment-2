@@ -1,6 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+"""
+This code Reads and filters data, plots data in bar plots and line plots and heat maps.
+It also performs statistical functions on the data
+"""
 
 # Load the CSV file into a DataFrame
 file_path = 'world_bank.csv'
@@ -126,7 +130,7 @@ for country in countries:
     # Plot heatmap for the current country
     plot_heatmap(country_data, country)
 
-# Statistical Analysis
+# Statistical Analysis starts
 indicator_codes = ['SP.URB.TOTL.IN.ZS', 'EN.ATM.GHGT.KT.CE', 'EG.ELC.PETR.ZS', 'EG.USE.ELEC.KH.PC',
                    'EG.USE.COMM.GD.PP.KD', 'EG.FEC.RNEW.ZS', 'EG.ELC.RNWX.ZS', 'EG.ELC.RNEW.ZS',
                    'EG.ELC.NUCL.ZS', 'EG.ELC.NGAS.ZS', 'EG.ELC.HYRO.ZS', 'EG.ELC.COAL.ZS', 
@@ -147,7 +151,7 @@ for indicator_code in indicator_codes:
     # Additional statistical method standard deviation
     std_deviation = indicator_data.std()
 
-    # Print the results for the current indicator code
+    # Print the results for the indicator code
     print(f"\nDescribe Statistics for '{indicator_code}':")
     print(describe_stats)
 
